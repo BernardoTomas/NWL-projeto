@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: #121214 url(./Imgs/Fundo.jpg) no-repeat center top;
+    background-size: 100%;
+}
+
+body * {
+    line-height: 160%;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-top: 36px;
+    height: 152px;   
+}
+
+header img {
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100% );
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 4px;
+    width: 120px;
+    height: 120px;
+
+    transition: transform 0.3s;
+
+    animation: deCima 0.7s 0.4s backwards;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 40px;
+
+    display: grid;
+    gap: 24px;
+}
+
+main section:nth-child(1) {
+    animation: deBaixo 0.7s 0.4s backwards;
+}
+
+main section:nth-child(2) {
+    animation: deBaixo 0.7s 0.6s backwards;
+}
+
+main section:nth-child(3) {
+    animation: deBaixo 0.7s 0.8s backwards;
+}
+
+section {
+    color: white;
+    padding-top: 4px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100% );
+    border-radius: 12px;
+}
+
+section div {
+    background: #2A2634;
+    padding: 24px 32px 32px 32px;
+    border-radius: 8px;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: transform 0.3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    width: 70px;
+    border: 1px solid #443E54;
+    border-radius: 999px;
+}
+
+/*Animations*/
+
+@keyframes deCima {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes deBaixo {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
